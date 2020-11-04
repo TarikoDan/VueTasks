@@ -4,7 +4,7 @@
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
+      <a href="https://cli.vuejs.org" target="_blank" >vue-cli documentation</a>.
     </p>
     <h3>Task1: TODO List</h3>
     <div :style="{width: '70%', margin: 'auto'}">
@@ -56,16 +56,15 @@ export default {
         this.newTodoValue = '';
       }
     },
+
     removeTodo(n) {
-      console.log(n)
-      this.todos.forEach(value => console.log(value.title))
       // let i = this.todos.indexOf({'title': n});
       if (n !== -1) {
         this.todos.splice(n, 1)
       }
     },
+
     editTodo(n) {
-      console.log(n)
       if (this.editedTodoValue.length > 0)
       this.todos[n].title = this.editedTodoValue
       this.editedTodoValue = '';
